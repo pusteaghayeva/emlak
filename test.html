@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./src/img/gerb.png" type="image/x-icon">
+
+    <title>AZƏRBAYCAN RESPUBLİKASI
+        NAXÇIVAN MUXTAR RESPUBLİKASININ
+        İQTİSADİYYAT NAZİRLİYİ YANINDA
+        ƏMLAK MƏSƏLƏLƏRİ DÖVLƏT XİDMƏTİ</title>
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl-carousel -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- gallery -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="./src/css/global.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* body {
+            font-size: 0;
+            margin: 20px auto 0;
+            width: 100%;
+            max-width: 1000px;
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            padding-left: 0;
+        } */
+        .nmr {
+            margin: 100px 0;
+        }
+
+        .map,
+        .map-content {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .map {
+            width: 40%;
+            max-width: 400px;
+        }
+
+        #marker {
+            width: 20px;
+            display: none;
+            margin-left: -10px;
+            margin-top: -26px;
+            position: absolute;
+            transition: 0.3s ease-out;
+        }
+
+        #BR-SP:hover,
+        #BR-MG:hover,
+        #BR-PR:hover,
+        #BR-PA:hover {
+            fill: #deb2a8 !important;
+            cursor: pointer;
+        }
+
+        .map-content {
+            width: 60%;
+            padding-left: 20px;
+            padding-right: 50px;
+        }
+
+        .states-list .item {
+            color: #0070ff;
+        }
+
+        .states-list .link {
+            display: inline-block;
+            padding: 6px 0;
+            color: inherit;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .states-content [data-state] {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .states-content [data-state]:not([style]) {
+            display: none;
+        }
+
+        /* chat */
+
+        .map-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .map-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .click-zone {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            /* background: rgba(255, 0, 0, 0.2);  // yoxlamaq üçün görünən zona */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="position-relative">
+
+        <a href="index.html" class="header-img">
+            <img src="./src/img/header.png" class="d-block" width="100%" alt="">
+        </a>
+        <div class="header-info">
+
+            <div class="right-blog">
+                <div class="container">
+                    <p class="cloud">
+                        <!-- <i class="fa-solid fa-cloud"></i> -->
+                        <img src="./src/img/cloud.svg" alt="">
+                        12 <sup>o</sup>C
+                    </p>
+                    <p class="date-blog">
+                        21 may 2025-ci il 09:00 <span id="time"></span>
+                    </p>
+
+                    <div class="header-top-right">
+                        <div class="search-phone-group">
+                            <a href="tel:xxx" class="phone-icon">
+                                <img src="./src/img/phone.svg" alt="phone" class="header-phone-icon">
+                            </a>
+                            <button class="search-toggle">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <input type="text" class="search-expand" placeholder="Axtar..." />
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="menu-section w-100">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container" id="menuContainer">
+                    <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html">
+                                    <i class="fa-solid fa-house"></i>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Xidmət haqqında <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="./static.html">Rəhbərlik</a></li>
+                                    <li><a class="dropdown-item" href="./static.html">Məlumat</a></li>
+                                    <li><a class="dropdown-item" href="./static.html">Əsasnamə</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="./static.html">Struktur</a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Qanunvericilik <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                    <li><a class="dropdown-item" href="./legislation.html">Konstitusiya</a></li>
+                                    <li><a class="dropdown-item" href="./legislation.html">Qanunlar</a></li>
+                                    <li><a class="dropdown-item" href="./legislation.html">Məcəllələr</a></li>
+                                    <li><a class="dropdown-item" href="./legislation.html">Fərman və sərəncamlar</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="./static.html">Rüsumlar</a></li>
+                                    <li><a class="dropdown-item" href="./static.html">Tariflər</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Mətbuat Xidməti <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                    <li><a class="dropdown-item" href="./news.html">Xəbərlər</a></li>
+                                    <li><a class="dropdown-item" href="./articles.html">Məqalələr</a></li>
+                                    <li><a class="dropdown-item" href="./gallery.html">Foto qalareya</a></li>
+                                    <li><a class="dropdown-item" href="./video-gallery.html">Video materiallar</a></li>
+                                    <li><a class="dropdown-item" href="news.html">Hesabatlar</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Müsabiqə və Hərraclar <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                    <li><a class="dropdown-item" href="./legislation.html">Müsabiqələr</a></li>
+                                    <li><a class="dropdown-item" href="./legislation.html">Hərraclar</a></li>
+                                    <li><a class="dropdown-item" href="./legislation.html">Nəticələr</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Vətəndaşlar üçün <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                    <li><a class="dropdown-item" href="./static.html">Qəbul qrafiki</a></li>
+                                    <li><a class="dropdown-item" href="./legislation.html">Tələb olunan sənədlər</a>
+                                    </li>
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="https://e-emlak.gov.az/eemdk/az/CheckAppStatus">Müraciətin icra
+                                            vəziyyətinin
+                                            öyrənilməsi</a></li>
+                                    <li><a class="dropdown-item" href="./recruitment.html">İşə qəbul</a></li>
+                                    <li><a class="dropdown-item" href="./e-application.html">E-müraciətlər</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Elanlar <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                    <li><a class="dropdown-item" href="./job_announcements.html">İş elanları</a></li>
+                                    <li><a class="dropdown-item" href="./job_announcements">Digər elanlar</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <main>
+        <div class="nmr">
+            <div class="container">
+                <div class="map-content">
+                    <ul class="states-list" id="stateList">
+                        <li class="item"><a class="link" href="#BR-SE">Sədərək</a></li>
+                        <li class="item"><a class="link" href="#BR-SR">Şərur</a></li>
+                        <li class="item"><a class="link" href="#BR-KG">Kəngərli</a></li>
+                        <li class="item"><a class="link" href="#BR-BA">Babək</a></li>
+                        <li class="item"><a class="link" href="#BR-SB">Şahbuz</a></li>
+                        <li class="item"><a class="link" href="#BR-NA">Naxçıvan</a></li>
+                        <li class="item"><a class="link" href="#BR-JU">Culfa</a></li>
+                        <li class="item"><a class="link" href="#BR-OR">Ordubad</a></li>
+
+                    </ul>
+                    <div class="states-content">
+                        <!-- ******* -->
+                        <section data-state="BR-SE">
+                            <p><b>Sədərək</b> is a municipality in the southeast region of Brazil. The metropolis is
+                                an alpha
+                                global city (as listed by the GaWC) and is the most populous city in Brazil and the
+                                Americas, as
+                                well as in the Southern Hemisphere. </p>
+                        </section>
+                        <section data-state="BR-SR">
+                            <p><b>Şərur</b> is a state in the north of Southeastern Brazil. It ranks as the
+                                second most
+                                populous, the third by gross domestic product (GDP), and the fourth largest by area in
+                                the
+                                country.</p>
+                        </section>
+                        <section data-state="BR-KG">
+                            <p><b>Kəngərli</b> is one of the 26 states of Brazil, located in the south of the country,
+                                bordered on
+                                the north by São Paulo state, on the east by the Atlantic Ocean, on the south by Santa
+                                Catarina
+                                state and the province of Misiones, Argentina, and on the west by Mato Grosso do Sul and
+                                the
+                                departments of Alto Paraná and Canindeyú in Paraguay, with the Paraná River as its
+                                western
+                                boundary line.</p>
+                        </section>
+                        <section data-state="BR-BA">
+                            <p><b>Babək</b> is a state in northern Brazil traversed by the lower Amazon River. It
+                                borders
+                                the
+                                Brazilian states of (clockwise from north) Amapá, Maranhão, Tocantins, Mato Grosso,
+                                Amazonas and
+                                Roraima.</p>
+                        </section>
+                        <section data-state="BR-SB">
+                            <p><b>Şahbuz</b> is a municipality in the southeast region of Brazil. The metropolis is
+                                an alpha
+                                global city (as listed by the GaWC) and is the most populous city in Brazil and the
+                                Americas, as
+                                well as in the Southern Hemisphere. </p>
+                        </section>
+                        <section data-state="BR-NA">
+                            <p><b>Naxçıvan</b> is a state in the north of Southeastern Brazil. It ranks as the
+                                second most
+                                populous, the third by gross domestic product (GDP), and the fourth largest by area in
+                                the
+                                country.</p>
+                        </section>
+                        <section data-state="BR-JU">
+                            <p><b>Culfa</b> is one of the 26 states of Brazil, located in the south of the country,
+                                bordered on
+                                the north by São Paulo state, on the east by the Atlantic Ocean, on the south by Santa
+                                Catarina
+                                state and the province of Misiones, Argentina, and on the west by Mato Grosso do Sul and
+                                the
+                                departments of Alto Paraná and Canindeyú in Paraguay, with the Paraná River as its
+                                western
+                                boundary line.</p>
+                        </section>
+                        <section data-state="BR-OR">
+                            <p><b>Ordubad</b> is a state in northern Brazil traversed by the lower Amazon River. It
+                                borders
+                                the
+                                Brazilian states of (clockwise from north) Amapá, Maranhão, Tocantins, Mato Grosso,
+                                Amazonas and
+                                Roraima.</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="map">
+                    <div id="marker">
+                        <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.1 36.2"
+                            style="enable-background:new 0 0 24.4 36.2;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #672D3C;
+                                }
+                            </style>
+                            <path class="st0" d="M12,0C0.8,0-0.1,11.6,1.1,15.9C2.6,21.5,12,36.2,12,36.2s9.4-14.7,10.9-20.3C24.1,11.6,23.2,0,12,0z M12,17.1
+	c-2.4-0.1-4.3-2-4.3-4.4S9.6,8.3,12,8.2c2.4,0.1,4.3,2,4.3,4.4S14.4,17,12,17.1z" />
+                        </svg>
+
+                    </div>
+                    <svg id="root" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="https://amcharts.com/ammap"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 620 640">
+                        <defs>
+                            <pattern id="pin" x="0" y="0" height="100%" width="100%">
+                                <rect x="0" y="0" width="100%" height="100%" fill="orange"></rect>
+                                <image x="50%" y="50%" height="40px" width="30px"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="https://cdn2.iconfinder.com/data/icons/basic-ui-elements-plain/472/09_location_pin-128.png">
+                                </image>
+                            </pattern>
+                            <style type="text/css">
+                                .land {
+                                    fill: #e3dfdc;
+                                    fill-opacity: 1;
+                                    stroke: white;
+                                    stroke-opacity: 1;
+                                    stroke-width: 1;
+                                }
+
+                                #BR-SE,
+                                #BR-SR,
+                                #BR-KG,
+                                #BR-BA,
+                                #BR-SB,
+                                #BR-NA,
+                                #BR-JU,
+                                #BR-OR {
+                                    fill: #E2C5BF;
+                                }
+                            </style>
+
+                            <amcharts:ammap projection="mercator" leftLongitude="-74.008595" topLatitude="5.275696"
+                                rightLongitude="-34.789914" bottomLatitude="-33.744725" />
+
+
+                        </defs>
+                        <g>
+                            <svg style="margin-top: 0;" class="map-nakh" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 820 820"
+                                xml:space="preserve">
+                                <path title="ŞƏRUR RPŞ" id="BR-SR" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M59.2165 589.458L56.0535 599.546L53.4035 610.659L48.6163 618.438L42.2049 623.14L36.9903 619.549L35.6225 617.327L34.5112 616.985L32.2031 616.899L28.4417 614.164L27.9288 612.881L29.1256 610.573L26.0481 607.838L24.2529 604.076L19.8932 585.868L18.1834 581.765L15.106 579.542L16.1318 578.174L12.7124 578.089L9.6349 577.405L9.0365 577.148L13.0543 569.711L19.0383 563.813L24.7658 562.103L27.9288 558.256V557.145L28.7837 556.632L34.1692 552.443L39.6403 550.562L44.5985 553.127L55.2842 566.89L56.8229 570.053L57.4213 573.558L57.2503 578.003L55.7971 584.842L56.3955 587.578L59.2165 589.458Z">
+                                </path>
+                                <path title="KƏNGƏRLİ RPŞ" id="BR-KG" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M73.577 584.241L72.3802 585.438L69.0463 590.653L67.1656 596.295L65.7124 602.193L64.6011 607.237L65.5414 612.281L67.6785 617.239L68.7899 622.453L67.8495 624.334L67.0801 626.557L69.0463 631.002L68.4479 635.191L65.5414 637.157L61.78 638.952L57.9332 640.149L54.6847 639.123L51.4363 637.841L48.7008 631.771L47.5894 629.976L46.2217 629.207L44.7684 627.411L43.5716 625.531L43.0587 624.163L42.2039 623.137L48.6153 618.435L53.4025 610.656L56.0525 599.543L59.2155 589.456L64.6011 588.174L68.7044 584.241L72.6367 582.959L73.577 584.241Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path title="ŞAHBUZ RPŞ" id="BR-SB" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M146.155 628.438L141.709 633.738L138.632 637.585L134.956 636.901L131.708 633.396L127.519 635.704L121.107 638.183L114.867 641.774L112.388 642.201L111.02 639.636L111.362 635.875L108.284 631.943L101.531 628.523L95.0342 625.36L93.4955 621.257L92.2132 617.325L89.0503 616.042L86.8276 614.333L90.3325 608.947L95.0342 605.015L96.573 602.963L98.1117 603.903L99.7359 604.16L101.446 603.818L104.609 602.365L116.32 594.842L120.252 593.218L138.888 588.687L142.308 588.602L146.326 590.14L149.659 592.534L150.942 594.928V598.176L150.514 602.963L151.797 611.597L151.198 614.589L146.24 622.71L145.3 626.472L146.155 628.438Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path title="SƏDƏRƏK RPŞ" id="BR-SE" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M9.03576 577.146L6.98411 575.864L4.93246 572.957L3.30823 565.777L1.85498 563.383L5.95829 561.588L12.7971 560.391L19.1231 560.477L24.0812 559.28L27.9281 557.143V558.254L24.7651 562.101L19.0376 563.81L13.0536 569.709L9.03576 577.146Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path title="ORDUBAD RPŞ" id="BR-OR" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M146.753 707.426L149.489 702.639L145.129 698.194L139.914 694.433L139.572 692.552L140.256 690.757L140.769 687.337L141.624 684.26L147.779 676.481L152.908 665.282L154.276 661.692L155.216 658.016L155.9 654.767L156.84 651.775L159.918 648.527L162.824 645.107L166.244 640.662L174.536 644.765L177.528 647.586L178.468 649.125L178.81 650.493L178.468 651.861L174.023 657.759L173.083 662.546L174.45 667.505L177.528 672.634L181.289 678.019L184.281 684.003L191.804 705.289L200.352 721.531L198.899 721.702L190.436 719.565L180.776 715.205L150.087 708.709L146.753 707.426Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path title="CULFA RPŞ" id="BR-JU" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M166.243 640.664L162.824 645.109L159.918 648.529L156.84 651.777L155.9 654.769L155.216 658.017L154.275 661.693L152.908 665.284L147.779 676.482L141.624 684.261L140.769 687.339L140.256 690.758L139.572 692.554L139.914 694.434L145.129 698.196L149.488 702.641L146.753 707.428L139.23 704.436L126.236 704.351L117.944 702.299L113.926 702.128L112.815 701.871L112.217 694.862L114.183 692.383L115.038 689.818L111.191 684.176L108.455 677.936L111.191 672.123L111.618 665.369L107.515 662.377L102.899 660.667L109.139 656.735L112.131 649.896L116.491 647.075L114.867 641.775L121.107 638.185L127.519 635.706L131.707 633.398L134.956 636.902L138.632 637.586L141.709 633.74L146.154 628.439L146.582 629.294L154.874 631.431L157.866 633.91L160.601 636.902L164.106 639.638L166.243 640.664Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path title="BABƏK RPŞ" id="BR-BA" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M96.5726 602.965L95.0339 605.017L90.3322 608.949L86.8273 614.335L89.0499 616.045L92.2129 617.327L93.4951 621.259L95.0339 625.363L101.531 628.526L108.284 631.945L111.362 635.877L111.02 639.639L112.387 642.203L114.867 641.776L116.491 647.076L112.131 649.897L103.07 650.068L93.8371 650.752L85.8015 650.324L80.1594 654.684L90.2467 662.121L102.899 660.668L107.515 662.378L111.618 665.37L111.191 672.123L108.455 677.936L111.191 684.177L115.037 689.819L114.183 692.383L112.216 694.862L112.815 701.872L112.131 701.787L109.139 699.992L105.121 698.88L101.787 697.256L98.7098 695.204L97.0001 693.238L96.7436 691.186L97.7694 688.024L98.1114 686.057L97.342 684.861L93.9226 683.236L92.5548 682.211L91.7854 680.672L90.6741 676.568L90.0757 675.115L88.6225 673.662L86.0579 671.867L85.0321 669.986L86.3144 667.165L85.4595 665.199L83.5788 664.002L81.5272 663.575L80.0739 662.891L80.1594 661.267L80.5014 659.471L80.0739 658.275L78.7062 658.104L77.4239 658.702L75.9706 659.728L60.8397 654.684L56.9928 655.881L56.0525 652.975L54.5138 643.657L53.4879 641.605L52.2911 639.81L51.4363 637.844L54.6847 639.126L57.9332 640.152L61.78 638.955L65.5414 637.16L68.4479 635.193L69.0463 631.005L67.0801 626.559L67.8495 624.337L68.7898 622.456L67.6785 617.242L65.5414 612.283L64.601 607.24L65.7124 602.196L67.1656 596.298L69.0463 590.656L72.3802 585.441L73.577 584.244L77.1674 589.373L78.8771 593.306L80.3304 595.443L82.4675 596.298L89.3918 596.896L91.9564 598.264L96.5726 602.965Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path title="NAXÇIVAN" id="BR-NA" data-pid="0" data-toggle="tooltip"
+                                    data-placement="top" class="land"
+                                    d="M102.899 660.668L90.2471 662.121L80.1598 654.684L85.8018 650.324L93.8375 650.751L103.07 650.067L112.131 649.896L109.139 656.735L102.899 660.668Z"
+                                    fill="white" stroke="#1EBFE3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="nmr-map">
+            <div class="map-container">
+                <img src="naxcivan-relyef.png" class="map-img" alt="Naxçıvan Xəritəsi" />
+
+                <!-- Rayonların clickable bölgələri -->
+                <div class="click-zone" data-region="Sədərək" style="top: 70px; left: 50px;"></div>
+                <div class="click-zone" data-region="Şərur" style="top: 120px; left: 100px;"></div>
+                <!-- davam etdirilir... -->
+            </div>
+
+        </div>
+
+    </main>
+</body>
+
+<footer>
+    <div class="container">
+        <div class="telephone-request">
+            Telefon müraciəti: <a href="" class="footer-phone-number">+994(36) 545 77 39</a>
+        </div>
+        <div class="footer-menu-bt">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                    <h5 class="footer-title">Xidmət haqqında</h5>
+                    <ul class="footer-menu">
+                        <li><a href="./static.html">Rəhbərlik</a></li>
+                        <li><a href="./static.html">Struktur</a></li>
+                        <li><a href="./static.html">Məlumat</a></li>
+                        <li><a href="./static.html">Əsasnamə</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                    <h5 class="footer-title">Əlaqə</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">Telefon: +994(36) 545 77 39</a></li>
+                    </ul>
+                    <h5 class="footer-title">E-mail</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">info@nemlak.gov.az</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <h5 class="footer-title">Ünvan</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">NMR, Naxçıvan şəhəri,
+                                Zərifə Əliyeva küçəsi 15A</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-5">
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.2559558375796!2d44.7937852!3d39.2083305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4014cdcb60d416c5%3A0x1e73b7f3a9ba7a8c!2sNax%C3%A7%C4%B1van!5e0!3m2!1sen!2saz!4v1697897595146!5m2!1sen!2saz"
+                            width="100%" height="196" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        Copyright © 2025 <a href="" class="copyright-link">Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi</a>
+    </div>
+
+</footer>
+
+
+
+
+
+<script src="./src/js/bootstrap.bundle.js"></script>
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- gallery -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="./src/js/calendar.js"></script>
+<script src="./src/js/map.js"></script>
+<script src="./src/js/main.js"></script>
+<script>
+    const menuStates = document.querySelectorAll('#stateList a'),
+        mapStates = [...menuStates].map(state => state.hash);
+
+    mapStates.forEach(state =>
+        document.querySelector(state) &&
+        document.querySelector(state).addEventListener("click", function (event) {
+            controller(event.target.id);
+        })
+    );
+
+    menuStates.forEach(state =>
+        document.querySelector(state.getAttribute("href")) &&
+        state.addEventListener("click", function (event) {
+            event.preventDefault()
+            controller(event.target.getAttribute("href").substr(1));
+        })
+    );
+
+    function controller(stateId) {
+        const stateMap = document.querySelector(`#${stateId}`),
+            stateMenu = document.querySelector(`[href="#${stateId}"]`),
+            stateDescription = document.querySelector(`[data-state="${stateId}"]`);
+
+        stateMap.setAttribute('style', 'fill:#DEB2A8; cursor: default;');
+        clearSiblingStyle(stateMap);
+
+        stateMenu.parentElement.style.color = "#a53b56";
+        clearSiblingStyle(stateMenu.parentElement);
+
+        stateDescription.style.display = "block";
+        clearSiblingStyle(stateDescription);
+
+        addMarker(stateMap);
+    }
+
+    function clearSiblingStyle(activeElem) {
+        [...activeElem.parentElement.children]
+            .filter(elem => elem !== activeElem)
+            .forEach(inactiveElem => inactiveElem.removeAttribute("style"));
+    }
+
+    function addMarker(state) {
+        const d = document.getElementById('marker'),
+            pathPos = state.getBoundingClientRect(),
+            w = pathPos.width / 2,
+            h = pathPos.height / 2,
+            x = pathPos.left,
+            y = pathPos.top;
+        d.style.left = `${w + x + window.scrollX}px`;
+        d.style.top = `${h + y + window.scrollY}px`;
+        d.style.display = 'block';
+    }
+    // chat
+
+</script>
+</body>
+
+</html>

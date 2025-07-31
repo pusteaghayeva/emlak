@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./src/img/gerb.png" type="image/x-icon">
+
+    <title>AZƏRBAYCAN RESPUBLİKASI
+        NAXÇIVAN MUXTAR RESPUBLİKASININ
+        İQTİSADİYYAT NAZİRLİYİ YANINDA
+        ƏMLAK MƏSƏLƏLƏRİ DÖVLƏT XİDMƏTİ</title>
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl-carousel -->
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="./src/css/global.css">
+</head>
+
+<body>
+
+    <header class="position-relative">
+
+        <a href="index.html" class="header-img">
+            <img src="./src/img/header.png" class="d-block" width="100%" alt="">
+        </a>
+        <div class="header-info">
+
+            <div class="right-blog">
+                <div class="container">
+                    <p class="cloud">
+                        <img src="./src/img/cloud.svg" alt="">
+                        12 <sup>o</sup>C
+                    </p>
+                    <p class="date-blog">
+                        21 may 2025-ci il 09:00 <span id="time"></span>
+                    </p>
+
+                    <div class="header-top-right">
+                        <div class="search-phone-group">
+                            <a href="tel:xxx" class="phone-icon">
+                                <img src="./src/img/phone.svg" alt="phone" class="header-phone-icon">
+                            </a>
+                            <button class="search-toggle">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <input type="text" class="search-expand" placeholder="Axtar..." />
+                            <button class="search-submit" type="submit">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <nav>
+        <div class="navbar">
+            <i class='bx bx-menu'></i>
+            <div class="logo"><a href="#">Logo</a></div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name">Logo</span>
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="links">
+                    <li><a href="./index.html" class="active">
+
+                            <i class="fa-solid fa-house"></i>
+                        </a></li>
+                    <li>
+
+
+                        <span class="menu-toggle">
+                            <a href="#">Xidmət haqqında</a>
+                            <i class="fa-solid fa-angle-down rotate-icon"></i>
+                        </span>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="./static.html">Rəhbərlik</a></li>
+                            <li><a href="./static.html">Məlumat</a></li>
+                            <li><a href="./static.html">Əsasnamə</a></li>
+                            <li><a href="./static.html">Rəhbərlik</a></li>
+                            <li><a href="./static.html">Struktur</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="menu-toggle">
+                            <a href="#">Qanunvericilik</a>
+                            <i class="fa-solid fa-angle-down rotate-icon"></i>
+                        </span>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="./legislation.html">Konstitusiya</a></li>
+                            <li><a href="./legislation.html">Qanunlar</a></li>
+                            <li><a href="./legislation.html">Məcəllələr</a></li>
+                            <li><a href="./legislation.html">Fərman və sərəncamlar</a></li>
+                            <li><a href="./static.html">Rüsumlar</a></li>
+                            <li><a href="./static.html">Tariflər</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="menu-toggle">
+                            <a href="#">Mətbuat Xidməti</a>
+                            <i class="fa-solid fa-angle-down rotate-icon"></i>
+                        </span>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="./news.html">Xəbərlər</a></li>
+                            <li><a href="./articles.html">Məqalələr</a></li>
+                            <li><a href="./gallery.html">Foto qalareya</a></li>
+                            <li><a href="./video-gallery.html">Video materiallar</a></li>
+                            <li><a href="./news.html">Hesabatlar</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="menu-toggle">
+                            <a href="#">Müsabiqə və Hərraclar</a>
+                            <i class="fa-solid fa-angle-down rotate-icon"></i>
+                        </span>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="./legislation.html">Müsabiqələr</a></li>
+                            <li><a href="./legislation.html">Hərraclar</a></li>
+                            <li><a href="./legislation.html">Nəticələr</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="menu-toggle">
+                            <a href="#">Vətəndaşlar üçün</a>
+                            <i class="fa-solid fa-angle-down rotate-icon"></i>
+                        </span>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="./static.html">Qəbul qrafiki</a></li>
+                            <li><a href="./legislation.html">Tələb olunan sənədlər</a></li>
+                            <li><a href="https://e-emlak.gov.az/eemdk/az/CheckAppStatus" target="_blank">Müraciətin icra
+                                    vəziyyətinin
+                                    öyrənilməsi</a></li>
+
+                            <li><a href="./recruitment.html">İşə qəbul</a></li>
+
+                            <li><a href="./e-application.html">E-müraciətlər</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <span class="menu-toggle">
+                            <a href="#">Elanlar</a>
+                            <i class="fa-solid fa-angle-down rotate-icon"></i>
+                        </span>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="job_announcements.html">İş elanları</a></li>
+                            <li><a href="job_announcements.html">Digər elanlar</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                    style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 191.495;">
+                </path>
+            </svg>
+        </div>
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                    style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 191.495;">
+                </path>
+            </svg>
+        </div>
+        <a href="#!" class="fixed-mail-icon">
+            <img src="./src/img/mail.svg" alt="Mail Icon">
+        </a>
+        <section class="first-slider">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="container">
+
+                            <div class="carousel-item active">
+
+                                <div class="carousel-item-flex">
+                                    <div class="carousel-item-right">
+                                        <img src="/src/img/news1.png" class="d-block w-100" alt="carousel-item-right">
+                                    </div>
+                                    <div class="carousel-item-left">
+                                        <div class="carousel-caption d-md-block">
+                                            <a href="./single-news.html" class="carousel-news-title">Leyla Əliyeva və
+                                                Arzu Əliyeva
+                                                Naxçıvan Muxtar
+                                                Respublikasında Ulu öndər
+                                                Heydər Əliyevin xatirəsini ehtiramla yad ediblər.</a>
+                                            <div class="carousel-news-date">
+                                                02.05.2025
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="carousel-item-flex">
+                                    <div class="carousel-item-right">
+                                        <img src="/src/img/news1.png" class="d-block w-100" alt="carousel-item-right">
+                                    </div>
+                                    <div class="carousel-item-left">
+                                        <div class="carousel-caption d-md-block">
+                                            <a href="./single-news.html" class="carousel-news-title">Leyla Əliyeva və
+                                                Arzu Əliyeva
+                                                Naxçıvan Muxtar
+                                                Respublikasında Ulu öndər
+                                                Heydər Əliyevin xatirəsini ehtiramla yad ediblər.</a>
+                                            <div class="carousel-news-date">
+                                                02.05.2025
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item ">
+
+                                <div class="carousel-item-flex">
+                                    <div class="carousel-item-right">
+                                        <img src="/src/img/news1.png" class="d-block w-100" alt="carousel-item-right">
+                                    </div>
+                                    <div class="carousel-item-left">
+                                        <div class="carousel-caption  d-md-block">
+                                            <a href="./single-news.html" class="carousel-news-title">Leyla Əliyeva və
+                                                Arzu Əliyeva
+                                                Naxçıvan Muxtar
+                                                Respublikasında Ulu öndər
+                                                Heydər Əliyevin xatirəsini ehtiramla yad ediblər.</a>
+                                            <div class="carousel-news-date">
+                                                02.05.2025
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+        </section>
+        <section class="announcements">
+            <div class="ticker-container">
+                <div class="ticker-text">
+                    ELANLAR: Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak
+                    Məsələləri Dövlət Xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik hüquqi şəxs
+                    tərəfindən
+                </div>
+            </div>
+        </section>
+
+
+        <section class="e-services">
+            <div class="e-services-flex">
+                <ul class="e-services-social">
+                    <li class="e-services-li">
+                        <a href="" class="e-services-link">
+                            <img src="./src/img/instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="e-services-li">
+                        <a href="" class="e-services-link">
+                            <img src="./src/img/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="e-services-li">
+                        <a href="" class="e-services-link">
+                            <img src="./src/img/whatsapp.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="e-services-carousel">
+                    <h2 class="e-services-title">E-Xidmətlər</h2>
+                    <div class="e-services-line"></div>
+                </div>
+                <div class="services-carousel">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="news-slider" class="owl-carousel owl-theme">
+                                    <div class="post-slide">
+                                        <a href="./static.html" class="post-slide-abs"></a>
+                                        <img src="./src/img/services1.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Qəbul qrafiki</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-slide">
+                                        <a href="./legislation.html" class="post-slide-abs"></a>
+                                        <img src="./src/img/services2.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Hüquqların qeydiyyatı üçün tələb olunan sənədlər</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-slide">
+                                        <a href="https://e-emlak.gov.az/Icra" class="post-slide-abs"
+                                            target="_blank"></a>
+                                        <img src="./src/img/services3.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Müraciətin icra vəziyyəti</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-slide">
+                                        <a href="https://e-emlak.gov.az/portalservices/calculator"
+                                            class="post-slide-abs" target="_blank"></a>
+                                        <img src="./src/img/services4.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Əmlak kalkulyatoru</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-slide">
+                                        <a href="./e-application.html" class="post-slide-abs"></a>
+                                        <img src="./src/img/services5.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Elektron müraciət</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-slide">
+                                        <a href="https://e-emlak.gov.az/" target="_blank" class="post-slide-abs"></a>
+                                        <img src="./src/img/services6.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Elektron xidmətlər portalı</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-slide">
+                                        <a href="https://e-emlak.gov.az/" target="_blank" class="post-slide-abs"></a>
+                                        <img src="./src/img/services6.png" alt="" class="services-img">
+                                        <div class="post-content">
+                                            <h3 class="post-title">Elektron xidmətlər portalı</h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="news">
+            <div class="container">
+                <div class="e-services-carousel">
+                    <h2 class="e-services-title">Xəbərlər</h2>
+                    <div class="e-services-line"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-12  col-md-6 col-lg-6 col-xl-6">
+                            <div class="news-col-bg">
+                                <div class="row">
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-img">
+                                            <img src="./src/img/news2.png" class="news-img" alt="">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-content">
+                                            <p class="news-blog-date">02.05.2025</p>
+                                            <div class="news-blog-title">
+                                                Leyla Əliyeva və Arzu Əliyeva Naxçıvan Muxtar Respublikasında Ulu öndər
+                                                Heydər Əliyevin xatirəsini ehtiramla yad ediblər.
+                                            </div>
+                                            <a href="./single-news.html" class="news-blog-more">
+                                                Ətraflı oxu
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-12  col-md-6 col-lg-6 col-xl-6">
+                            <div class="news-col-bg">
+                                <div class="row">
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-img">
+                                            <img src="./src/img/news2.png" class="news-img" alt="">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-content">
+                                            <p class="news-blog-date">02.05.2025</p>
+                                            <div class="news-blog-title">
+                                                İqtisadiyyat nazirinin müavini Zaqatalada vətəndaşları qəbul edib
+                                            </div>
+                                            <a href="./single-news.html" class="news-blog-more">
+                                                Ətraflı oxu
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-sm-12  col-md-6 col-lg-6 col-xl-6">
+                            <div class="news-col-bg">
+                                <div class="row">
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-img">
+                                            <img src="./src/img/news1.png" class="news-img" alt="">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-content">
+                                            <p class="news-blog-date">02.05.2025</p>
+                                            <div class="news-blog-title">
+                                                İqtisadiyyat nazirinin müavini Zaqatalada vətəndaşları qəbul edib
+                                            </div>
+                                            <a href="./single-news.html" class="news-blog-more">
+                                                Ətraflı oxu
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12  col-md-6 col-lg-6 col-xl-6">
+                            <div class="news-col-bg">
+                                <div class="row">
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-img">
+                                            <img src="./src/img/news1.png" class="news-img" alt="">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-sm-12  col-md-12 col-lg-6 col-xl-6">
+                                        <div class="news-blog-content">
+                                            <p class="news-blog-date">02.05.2025</p>
+                                            <div class="news-blog-title">
+                                                İqtisadiyyat nazirinin müavini Zaqatalada vətəndaşları qəbul edib
+                                            </div>
+                                            <a href="./single-news.html" class="news-blog-more">
+                                                Ətraflı oxu
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+        <section class="announcements2">
+            <div class="container">
+                <div class="e-services-carousel">
+                    <h2 class="e-services-title">Elanlar</h2>
+                    <div class="e-services-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="news-right-feed">
+
+                            <div class="post-list-box" id="lent-widget">
+                                <div class="scroll-wrapper">
+                                    <div class="scroll-btn scroll-up"><i class="fa-solid fa-caret-up"></i></div>
+
+                                    <ul class="post-list" id="announcementScroll">
+                                        <!-- <ul class="post-list"> -->
+                                        <li class="post-list-item">
+                                            <div class="title-wrap">
+                                                <div class="announcement-img-blog">
+                                                    <img src="./src/img/news2.png" alt="announcement-img"
+                                                        class="announcement-img">
+                                                </div>
+                                                <p href="" class="title-wrap-a">Hərrac </p>
+                                                <p class="title-wrap-a">10:00 AM</p>
+                                                <p class="title-wrap-a">Tue May 13 2025</p>
+                                                <p class="title-wrap-a">13 may 2025-ci il tarixdə hərraca çıxarılacaq
+                                                    əmlaklar
+                                                    haqqında məlumat</p>
+                                                <a href="./static.html" class="title-wrap-read-more">
+                                                    Ətraflı
+                                                </a>
+                                        </li>
+                                        <li class="post-list-item">
+                                            <div class="title-wrap">
+                                                <div class="announcement-img-blog">
+                                                    <img src="./src/img/announcement.png" alt="announcement-img"
+                                                        class="announcement-img">
+                                                </div>
+                                                <p href="" class="title-wrap-a">Hərrac </p>
+                                                <p class="title-wrap-a">10:00 AM</p>
+                                                <p class="title-wrap-a">Tue May 13 2025</p>
+                                                <p class="title-wrap-a">13 may 2025-ci il tarixdə hərraca çıxarılacaq
+                                                    əmlaklar
+                                                    haqqında məlumat</p>
+                                                <a href="" class="title-wrap-read-more">
+                                                    Ətraflı
+                                                </a>
+                                        </li>
+                                        <li class="post-list-item">
+                                            <div class="title-wrap">
+                                                <div class="announcement-img-blog">
+                                                    <img src="./src/img/announcement.png" alt="announcement-img"
+                                                        class="announcement-img">
+                                                </div>
+                                                <p href="" class="title-wrap-a">Hərrac </p>
+                                                <p class="title-wrap-a">10:00 AM</p>
+                                                <p class="title-wrap-a">Tue May 13 2025</p>
+                                                <p class="title-wrap-a">13 may 2025-ci il tarixdə hərraca çıxarılacaq
+                                                    əmlaklar
+                                                    haqqında məlumat</p>
+                                                <a href="" class="title-wrap-read-more">
+                                                    Ətraflı
+                                                </a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="scroll-btn scroll-down"><i class="fa-solid fa-caret-down"></i></div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="container">
+                            <div class="calendar">
+                                <header>
+                                    <pre class="left"><i class="fa-solid fa-arrow-left"></i></pre>
+
+                                    <div class="header-display">
+                                        <img src="./src/img/calendar.svg" alt="calendar" class="calendar-img">
+                                        <p class="display">""</p>
+                                    </div>
+
+                                    <pre class="right"><i class="fa-solid fa-arrow-right"></i></pre>
+
+                                </header>
+
+                                <div class="week">
+                                    <div>B.e</div>
+                                    <div>Ç.a</div>
+                                    <div>Ç</div>
+                                    <div>C.a</div>
+                                    <div>C</div>
+                                    <div>Ş</div>
+                                    <div>B</div>
+                                </div>
+                                <div class="days"></div>
+                            </div>
+                            <div class="display-selected">
+                                <p class="selected"></p>
+                            </div>
+
+                            <div class="all-events">
+                                <div class="past-event">
+                                    Qeydiyyat vaxtı bitmiş tədbir
+                                </div>
+                                <div class="past-event ended-event">
+                                    Başa çatmış tədbir
+                                </div>
+
+                                <div class="past-event active-event">
+                                    Aktiv tədbir
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="other-announcements">
+                    <div class="announcement-relative">
+                        <div class="announcement-rel-title">
+                            Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri Dövlət
+                            xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik hüquqi şəxs tərəfindən 17 iyun
+                            2025-ci il tarixdə hərraca çıxarılacaqxammal barədə məlumat
+                        </div>
+                        <a href="" class="announcement-more">
+                            <img src="./src/img/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+                    <div class="announcement-relative">
+                        <div class="announcement-rel-title">
+                            Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri Dövlət
+                            xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik hüquqi şəxs tərəfindən 17 iyun
+                            2025-ci il tarixdə hərraca çıxarılacaqxammal barədə məlumat
+                        </div>
+                        <a href="" class="announcement-more">
+                            <img src="./src/img/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+                    <div class="announcement-relative">
+                        <div class="announcement-rel-title">
+                            Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri Dövlət
+                            xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik hüquqi şəxs tərəfindən 17 iyun
+                            2025-ci il tarixdə hərraca çıxarılacaqxammal barədə məlumat
+                        </div>
+                        <a href="" class="announcement-more">
+                            <img src="./src/img/arrow-right.svg" alt="arrow-right">
+                        </a>
+                    </div>
+
+                    <a href="./job_announcements.html" class="all-announcements">Bütün elanlar</a>
+
+                </div>
+        </section>
+
+
+        <!-- <section class="nmr">
+            <div class="container">
+                <div class="e-services-carousel">
+                    <h2 class="e-services-title">Naxçıvan Muxtar Respublikası</h2>
+                    <div class="e-services-line"></div>
+                </div>
+                <div class="nmr_map">
+
+                </div>
+            </div>
+
+        </section> -->
+
+
+        <section class="useful-links">
+            <div class="container">
+                <div class="e-services-carousel">
+                    <h2 class="e-services-title">Faydalı keçidlər</h2>
+                    <div class="e-services-line"></div>
+                </div>
+            </div>
+
+            <div class="useful-links-bg">
+                <div class="wrapper-with-margin">
+                    <div id="owl-demo" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="owl-demo-flex">
+                                <a href="" class="owl-demo-abs"></a>
+                                <img src="./src/img/link1.png" alt="link-img" class="owl-demo-img">
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title">
+                                        İlham Əliyev
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        president.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="owl-demo-flex">
+                                <a href="" class="owl-demo-abs"></a>
+                                <img src="./src/img/link2.jpg" alt="link-img" class="owl-demo-img">
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title">
+                                        Heydər Əliyev
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        haydaraliyevcenter.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="owl-demo-flex">
+                                <a href="" class="owl-demo-abs"></a>
+                                <img src="./src/img/link3.jpg" alt="link-img" class="owl-demo-img">
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title">
+                                        Mehriban Əliyeva
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        mehriban-aliyeva.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="owl-demo-flex">
+                                <a href="" class="owl-demo-abs"></a>
+                                <img src="./src/img/link4.jpg" alt="link-img" class="owl-demo-img">
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title">
+                                        Azərbaycan
+                                        Respublikası
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        azerbaijan.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="owl-demo-flex">
+                                <a href="" class="owl-demo-abs"></a>
+                                <img src="./src/img/link1.png" alt="link-img" class="owl-demo-img">
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title">
+                                        İlham Əliyev
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        president.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="owl-demo-flex">
+                                <a href="" class="owl-demo-abs"></a>
+                                <img src="./src/img/link1.png" alt="link-img" class="owl-demo-img">
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title">
+                                        İlham Əliyev
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        president.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="useful-links2">
+                <div class="container">
+                    <div id="owl-demo-2" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="owl-demo-flex-2">
+                                <a href="" class="owl-demo-abs"></a>
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title owl-demo-title-2">
+                                        Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri
+                                        Dövlət xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="owl-demo-flex-2">
+                                <a href="" class="owl-demo-abs"></a>
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title owl-demo-title-2">
+                                        Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri
+                                        Dövlət xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="owl-demo-flex-2">
+                                <a href="" class="owl-demo-abs"></a>
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title owl-demo-title-2">
+                                        Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri
+                                        Dövlət xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="owl-demo-flex-2">
+                                <a href="" class="owl-demo-abs"></a>
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title owl-demo-title-2">
+                                        Naxçıvan Muxtar Respublikasının İqtisadiyyat Nazirliyi yanında Əmlak Məsələləri
+                                        Dövlət xidmətinin tabeliyində “Hərracların Təşkili Mərkəzi” publik
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item">
+                            <div class="owl-demo-flex-2">
+                                <a href="" class="owl-demo-abs"></a>
+                                <div class="owl-demo-text">
+                                    <div class="owl-demo-title owl-demo-title-2">
+                                        İlham Əliyev
+                                    </div>
+                                    <div class="owl-demo-link">
+                                        president.az
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="telephone-request">
+                Telefon müraciəti: <a href="" class="footer-phone-number">+994(36) 545 77 39</a>
+            </div>
+            <div class="footer-menu-bt">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                        <h5 class="footer-title">Xidmət haqqında</h5>
+                        <ul class="footer-menu">
+                            <li><a href="./static.html">Rəhbərlik</a></li>
+                            <li><a href="./static.html">Struktur</a></li>
+                            <li><a href="./static.html">Məlumat</a></li>
+                            <li><a href="./static.html">Əsasnamə</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                        <h5 class="footer-title">Əlaqə</h5>
+                        <ul class="footer-menu">
+                            <li><a href="#">Telefon: +994(36) 545 77 39</a></li>
+                        </ul>
+                        <h5 class="footer-title">E-mail</h5>
+                        <ul class="footer-menu">
+                            <li><a href="#">info@nemlak.gov.az</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <h5 class="footer-title">Ünvan</h5>
+                        <ul class="footer-menu">
+                            <li><a href="#">NMR, Naxçıvan şəhəri,
+                                    Zərifə Əliyeva küçəsi 15A</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-5">
+                        <div class="footer-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.2559558375796!2d44.7937852!3d39.2083305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4014cdcb60d416c5%3A0x1e73b7f3a9ba7a8c!2sNax%C3%A7%C4%B1van!5e0!3m2!1sen!2saz!4v1697897595146!5m2!1sen!2saz"
+                                width="100%" height="196" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            Copyright © 2025 <a href="" class="copyright-link">Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi</a>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="./src/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./src/js/nav.js"></script>
+    <script src="./src/js/calendar.js"></script>
+    <script src="./src/js/scroll.js"></script>
+    <script src="./src/js/map.js"></script>
+    <script src="./src/js/back_to_top.js"></script>
+    <script src="./src/js/main.js"></script>
+
+</body>
+
+</html>

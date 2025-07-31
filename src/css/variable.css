@@ -1,0 +1,58 @@
+:root {
+    --headerBg: rgba(222, 237, 246, 0.5);
+    --headerColor: rgba(255, 255, 255, 1);
+    --cloudColor: rgba(103, 105, 107, 1);
+    --dateColor: rgba(31, 20, 22, 1);
+    --arrowIconColor: rgba(174, 174, 174, 1);
+    --fontNivea: 'Nivea', sans-serif;
+    --newsColor: rgba(48, 98, 121, 1);
+    --announcementsColor: rgba(216, 61, 61, 1);
+    --mailBg: rgba(0, 148, 144, 1);
+    --socialIconBorder: rgba(11, 174, 255, 1);
+    --eServicesBg: rgba(233, 238, 241, 1);
+    --servicesColor: rgba(110, 113, 115, 1);
+    --newsTitleColor: rgba(77, 77, 77, 1);
+    --calendarBg: rgba(0, 50, 69, 1);
+    --calendarDayColor: rgba(207, 218, 222, 1);
+    --pastEvent: rgba(148, 136, 98, 1);
+    --endedEvent: rgba(106, 0, 16, 1);
+    --activeEvent: rgba(0, 51, 72, 1);
+    --usefulLinkColor: rgba(114, 104, 104, 1);
+    --usefulLinkBg2: rgba(235, 234, 234, 1);
+    --usefulLinkTitleColor: rgba(93, 91, 91, 1);
+    --footerBg: rgba(233, 238, 241, 1);
+    --footerTitleColor: rgba(53, 53, 53, 1);
+    --footerMenuColor: rgba(97, 93, 93, 1);
+    --legislationIconColor: rgba(48, 98, 121, 1);
+    --fontWeight400: 400;
+    --readMoreColor: rgba(9, 121, 188, 1);
+    --announcementDate: rgba(52, 53, 54, 1);
+    --checkBoxColor: rgba(116, 112, 112, 1);
+    --inputColor: rgba(33, 33, 33, 1);
+    --btnSend: rgba(41, 157, 240, 1);
+    --liColor: rgba(255, 0, 0, 1);
+
+
+
+
+    /* --fontFamilyPop: "Poppins", sans-serif; */
+    /* --fontFamilyMon: "Montserrat", sans-serif; */
+    /* --searchColor: rgba(152, 152, 152, 1);
+    --navbarBg: rgba(225, 225, 225, 1);
+    --colorRed: rgba(180, 25, 25, 1);
+    --menuColor: rgba(128, 128, 128, 1);
+    --bodyBg: rgba(244, 237, 237, 1);
+    --calColor: rgba(147, 147, 147, 1);
+    --newsFeed: rgba(239, 239, 239, 1);
+    --iconColor: rgba(98, 98, 98, 1);
+    --copyrightBg: rgba(0, 74, 141, 1);
+    --scrollBg: rgba(228, 228, 228, 1);
+    --scrollColor: rgba(121, 121, 121, 1);
+    --authorBg: rgba(237, 235, 235, 1);
+    --aboutTextColor: rgba(73, 73, 73, 1);
+    --nmrColor: rgba(61, 197, 255, 1);
+    --nmrTextColor: rgba(77, 77, 77, 1); */
+
+
+
+}

@@ -1,0 +1,63 @@
+.static {
+    font-family: var(--fontNivea);
+}
+
+.static-title {
+    text-align: center;
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--newsColor);
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: var(--legislationIconColor);
+}
+
+.static-main-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.static-content {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin: 14px 0 100px 0;
+    color: var(--newsTitleColor);
+}
+
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 64px 0 40px;
+    flex-wrap: wrap;
+}
+
+
+.line {
+    flex: 1;
+    height: 1.4px;
+    background-color: var(--legislationIconColor);
+}
+
+
+@media only screen and (max-width: 760px) {
+    .static-title {
+        margin: 25px 0;
+    }
+
+    .static-main-title {
+        font-size: 18px;
+    }
+
+    .static-content {
+        margin: 14px 0 40px;
+    }
+}
