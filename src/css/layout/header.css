@@ -80,10 +80,15 @@
 
  .cloud {
      font-family: var(--fontFamilyPop);
-     color: var(--cloudColor);
+     color: var(--dateColor);
      font-weight: 700;
      font-size: 16px;
 
+
+ }
+
+ .cloud i {
+     color: #42A9FA;
  }
 
  .header-phone-icon {

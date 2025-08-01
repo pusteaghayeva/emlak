@@ -314,3 +314,54 @@ $('[data-fancybox="gallery"]').on('afterClose.fb', function() {
 })(jQuery); 
 
 // map
+// weather
+$(document).ready(() => {
+    const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=Nakhchivan&appid=58043dfa5bd5e54381af772954cd1ded&units=metric";
+
+    fetch(weatherUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Məlumat alına bilmədi');
+            }
+            return response.json();
+        })
+        .then(data => {
+            function getWeatherIcon(iconCode) {
+                const iconMap = {
+                    '01d': 'fa-sun',
+                    '01n': 'fa-moon',
+                    '02d': 'fa-cloud-sun',
+                    '02n': 'fa-cloud-moon',
+                    '03d': 'fa-cloud',
+                    '03n': 'fa-cloud',
+                    '04d': 'fa-cloud',
+                    '04n': 'fa-cloud',
+                    '09d': 'fa-cloud-showers-heavy',
+                    '09n': 'fa-cloud-showers-heavy',
+                    '10d': 'fa-cloud-sun-rain',
+                    '10n': 'fa-cloud-moon-rain',
+                    '11d': 'fa-bolt',
+                    '11n': 'fa-bolt',
+                    '13d': 'fa-snowflake',
+                    '13n': 'fa-snowflake',
+                    '50d': 'fa-smog',
+                    '50n': 'fa-smog'
+                };
+                return iconMap[iconCode] || 'fa-cloud';
+            }
+
+            const iconCode = data.weather[0].icon;
+            const weatherIcon = getWeatherIcon(iconCode);
+            const temperature = Math.round(data.main.temp);
+            const description = data.weather[0].description;
+
+            // Icon class təyin et
+            document.getElementById('weather-icon').className = `fa-solid ${weatherIcon}`;
+
+            // Temperaturu yaz
+            document.getElementById('weather').textContent = `${temperature}°C`;
+        })
+        .catch(error => {
+            console.error('Xəta:', error);
+        });
+});
